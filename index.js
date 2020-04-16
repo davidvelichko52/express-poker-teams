@@ -19,6 +19,8 @@ app.use(express.urlencoded({ extended: false }))
 
 // Include all routes from routers/controllers
 // TODO!
+app.use('/teams', require('./controllers/teams'))
+app.use('/players', require('./controllers/players'))
 
 // Home route
 app.get('/', (req, res) => {
